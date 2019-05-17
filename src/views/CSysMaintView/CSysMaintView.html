@@ -1,0 +1,35 @@
+<!-- CSysMaintView View html -->
+
+<div>
+    <table class="dataintable">
+    <p id="smvDemoTitle">Demo演示childView创建 + Html/Js数据同步</p>
+    <tbody>
+        <tr><th colspan="3" id='smvNTPTitle'>NTP对时</th></tr>
+        <tr><td class="weight" style="width: 100px">NTP Server</td> <td><a id="smvNTPServerIP"> 210.72.145.44</a></td>
+            <td rowspan="2" style="text-align: center;vertical-align: middle"><button id="smvRefreshBtn" class="incell" style="width: 100px; height: 50px">刷新</button></td>
+        </tr>
+        <tr><td class="weight" style="width: 100px"><a id="smvTime">网络对时</a></td> <td><a>{{smvTimeVal}}</a></td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+<div>
+    <table class="dataintable">
+    <tbody>
+        <tr><th colspan="4" id='smvTitleGJWH'>固件升级维护</th></tr>
+        <tr><td id="smvHWIp" class="weight" style="width: 100px"><a>设备地址</a></td>
+            <td colspan="3"><a>{{smvHWIpVal}}</a></td>
+        </tr>
+        <tr><td class="weight"><a id="smvHWIMEI">硬件设备号</a></td>
+            <td colspan="3"><a>{{smvHWIMEIVal}}</a></td>
+        </tr>
+        <tr><td class="weight"><a id="smvFWVer">固件版本号</a></td>
+            <td colspan="2"><a>{{smvFWVerVal}}</a></td>
+            <td style="width: 100px"><button id="smvSetDefaultBtn" class="incell" style="width: 95px">恢复出厂设置</button></td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+<div>
+
+</div>

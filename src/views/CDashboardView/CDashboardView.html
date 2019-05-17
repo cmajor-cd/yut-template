@@ -1,0 +1,35 @@
+<!-- CDashboardView View 的 html定义 -->
+
+<div>
+    <table class="dataintable">
+    <p id="dsvSysDemoTitleTxt">Demo演示childView创建 + Html/Js数据同步</p>
+    <tbody>
+        <tr> <th id="dsvSysTitleTxt" colspan="4">系统状态</th></tr>
+        <tr>
+            <td class="weight" style="width:160px"><a id="dsvLocTimeTxt">本机时间</a></td> <td><a>{{dsvLocTimeVal}}</a></td>
+            <td class="weight" style="width:150px"><a id="dsvDurationTimeTxt">本次开机持续时间</a></td> <td><a id="dsvDurationTimeVal">{{dsvDurationTimeVal}}</a></td>
+        </tr>
+        
+        <tr>
+            <td class="weight"><a id="dsvIMEITxt">硬件设备号</a></td>
+            <td colspan="3"><a>{{dsvIMEIVal}}</a></td>
+        </tr>
+
+        <tr>
+            <td class="weight"><a id="dsvFWVerTxt">固件版本号</a></td>
+            <td colspan="3"><a>{{dsvFWVerVal}}</a></td>
+        </tr>
+    </tbody>
+    </table>
+    <table class="dataintable">
+    <tbody>
+        <tr> <th id="dsvModTitleTxt" colspan="4">变更状态</th></tr>
+        <tr> <th id="dsvmtLocTimeTxt" class="light" style="width:150px">本机时间</th>  <th class="light" id="dsvmtDurationTimeTxt">本次开机持续时间</th> <th class="light" id="dsvmtIMEITxt">硬件设备号</th> <th class="light" id="dsvmtFWVerTxt" >固件版本号</th> </tr>
+        <tr>
+            <td><input id="dsvmtLocTimeVal" value="10"/></td> <td><input id="dsvmtDurationTimeVal" value="12"/></td> <td><input id="dsvmtIMEIVal" value="13"/></td> <td><input id="dsvmtFWVerVal" value="14"/></td>
+        </tr>
+        <tr><td colspan="4"><button id="dsvUpdateBtn" class="incellsmall" style="width:75px">更新</button></td> </tr>
+        <tr><td colspan="4"><button id="dsvTestBtn" class="incellsmall" style="width:75px">TEST</button></td> </tr>
+    </tbody>
+    </table>
+</div>

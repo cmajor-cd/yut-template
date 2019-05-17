@@ -1,0 +1,42 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "YUT-Demo",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "webpack",
+    "dev": "webpack-dev-server --inline --hot --open --port 5008",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmajor-cd/yut"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "yyt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmajor-cd/yut"
+  },
+  "homepage": "https://github.com/cmajor-cd/yut",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "mockjs": "^1.0.1-beta3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "yut": "^0.9.7"
+  }
+}
