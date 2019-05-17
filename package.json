@@ -4,9 +4,9 @@
   "description": "YUT-Demo",
   "main": "./src/index.js",
   "scripts": {
-    "test": "webpack",
-    "dev": "webpack-dev-server --inline --hot --open --port 5008",
-    "build": "webpack -p"
+    "test": "webpack-dev-server --inline --open --port 5008",
+    "dev": "webpack -w",
+    "build": "webpack -p --progress"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,6 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "yut": "^0.9.7"
+    "yut": "^0.9.8"
   }
 }
