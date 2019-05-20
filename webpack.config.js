@@ -6,7 +6,7 @@
 */
 
 const path = require("path");//nodejs中的基本包，处理路径的
-// const fs = require("fs");//nodejs中的基本包，处理文件的
+const cleanWebpackPlugin = require('clean-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin'); //打包html的插件
 
 module.exports = {
@@ -66,7 +66,8 @@ module.exports = {
             filename:'demo-index.html',//打包好后，发布的新建html名字为demo-index.html
             template:'./app-template.html',//'./app.html'为模板去创建新的html文件
             inject: 'body' //rel.js注入到 html - body 中
-        })
+        }),
+        new cleanWebpackPlugin()
     ]
     
 }
