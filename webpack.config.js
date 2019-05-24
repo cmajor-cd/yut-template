@@ -1,26 +1,19 @@
 /** 
  * 2019-05-15
  * YangYutong
- * 参考样例：打包SPA的组件
- *   https://www.jianshu.com/p/bc8c067575ba
-*/
-
+ * 参考样例： https://www.jianshu.com/p/bc8c067575ba
+ * */
+//const webpack = require('webpack');
 const path = require("path");//nodejs中的基本包，处理路径的
-const cleanWebpackPlugin = require('clean-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin'); //打包html的插件
+const cleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    devtool: 'source-map', // debug tools: map error to source code
-    // devServer:{
-    //     contentBase: path.join(__dirname,"release"),
-    //     historyApiFallback: true,
-    //     inline: true
-    // },
+    devtool: 'source-map',
     mode: "development", // defaut package type is development
-    entry: path.join(__dirname,"src/index.js"),//__dirname代表文件所在的目录
-    // entry: (readDirSync(path.join(__dirname,"src"))).js,//__dirname代表文件所在的目录
+    entry: path.join(__dirname,"./src/index.js"),//__dirname代表文件所在的目录
     output: {
-        filename: "demo.rel.js",
+        filename: "bundle.js",
         path: path.join(__dirname,"release"),
         libraryTarget: 'umd',
         umdNamedDefine: true
@@ -63,11 +56,13 @@ module.exports = {
     },
     plugins:[
         new htmlWebpackPlugin({
-            filename:'demo-index.html',//打包好后，发布的新建html名字为demo-index.html
+            filename:'index.html',//打包好后，发布的新建html名字为demo-index.html
             template:'./app-template.html',//'./app.html'为模板去创建新的html文件
-            inject: 'body' //rel.js注入到 html - body 中
+            inject: 'body', //rel.js注入到 html - body 中
         }),
-        new cleanWebpackPlugin()
+        new cleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['*.map', '*.js', '*.html'],
+        }),
     ]
     
 }
