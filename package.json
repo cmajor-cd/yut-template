@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cmajor-cd/yut"
+    "url": "https://gitee.com/cmajor-cd/yut-template"
   },
   "keywords": [
     "demo"
@@ -19,9 +19,9 @@
   "author": "yang yutong",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cmajor-cd/yut"
+    "url": "https://gitee.com/cmajor-cd/yut-template"
   },
-  "homepage": "https://github.com/cmajor-cd/yut",
+  "homepage": "https://gitee.com/cmajor-cd/yut-template",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
