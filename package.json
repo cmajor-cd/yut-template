@@ -1,6 +1,6 @@
 {
   "name": "demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "YUT-Demo",
   "main": "src/index.js",
   "scripts": {
@@ -40,6 +40,6 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "yut": ">=0.9.8"
+    "yut": ">=1.0.0"
   }
 }

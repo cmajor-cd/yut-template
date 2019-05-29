@@ -27,7 +27,7 @@ class CSysStatusView extends CView{
             },
             aRenderData: _this.Data,
             aChildViews: [CGnssView, CLanView],
-            aEvCallback: { evMounted: _this.myMounted, },
+            aEvCallback: { evMounted: _this.myMounted, evActived: _this.myActived},
         };
         // init this class-object
         this.init(option);
@@ -51,7 +51,12 @@ class CSysStatusView extends CView{
     }
     // evMounted
     myMounted() {
-        console.log('CSysStatusView.prototype.myMounted is CALLED!');
+        console.log('CSysStatusView.myMounted is CALLED!');
+        //alert('CSysStatusView.prototype.myMounted is CALLED!');
+    }
+    // evActived
+    myActived() {
+        console.log('CSysStatusView.myActived is CALLED!');
         //alert('CSysStatusView.prototype.myMounted is CALLED!');
     }
 }

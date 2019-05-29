@@ -23,7 +23,7 @@ class CGnssView extends CView{
             },
             aRenderData: _this.Data,
             aChildViews: [],
-            aEvCallback: {},
+            aEvCallback: {evMounted: _this.myMounted, evActived: _this.myActived},
         };
         // init this class-object
         this.init(option);
@@ -59,6 +59,16 @@ class CGnssView extends CView{
             //
             theApp.traverseAllViews(getOtherClassDataCb);
         });
+    }
+    // evMounted
+    myMounted() {
+        console.log('CGnssView.myMounted is CALLED!');
+        //alert('CGnssView.prototype.myMounted is CALLED!');
+    }
+    // evActived
+    myActived() {
+        console.log('CGnssView.myActived is CALLED!');
+        //alert('CGnssView.prototype.myMounted is CALLED!');
     }
     getDatafromServer() {
         let str = {

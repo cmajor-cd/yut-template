@@ -44,6 +44,7 @@ class CSysMaintView extends CView{
             },
             aRenderData: _this.Data,
             aChildViews: [],
+            aEvCallback: { evMounted: _this.myMounted, },
         };
         //2.初始化对象和成员函数
         this.init(option);
@@ -116,6 +117,12 @@ class CSysMaintView extends CView{
             });
         });
     }
+    // evMounted
+    myMounted() {
+        console.log('CSysMaintView.myMounted is CALLED!');
+        //alert('CSysMaintView.prototype.myMounted is CALLED!');
+    }
+   
 }
 // CSysMaintView.prototype = new CView();
 // CSysMaintView.prototype.Data = {
