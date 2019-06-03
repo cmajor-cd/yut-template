@@ -65,19 +65,17 @@ class CMainFrm extends CView{ // ! inherit from CView !
         $('#sysStatusViewEntry').click(() => { this.activeView('sysStatusView'); });
         $('#sysMaintViewEntry').click(() => { this.activeView('sysMaintView'); });
     }
-    evMainFrmActived(self) {
-        console.log('CMainFrm evActived CALLED!');
-        // 显示LOGView
-        self.activeView('loginView');
-    }
     /**
-     * evMounted could be triggered several times!
-     * each childview of this VIEW is compleed evMounted, this event will be triggered one time.
-     * because, the CEvent class DON't remove the event from event array, after it is triggered.
+     * evMounted
      */
     evMainFrmMounted(self) {
         self.evCount++;
         console.log('CMainFrm envMounted CALLED(' + self.evCount+' times)');
+    }
+    evMainFrmActived(self) {
+        console.log('CMainFrm evActived CALLED!');
+        // 显示LOGView
+        self.activeView('loginView');
     }
     whoami() {
         console.log('THIS is CMainFrm!');

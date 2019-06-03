@@ -80,6 +80,7 @@ table.dataintable td.weight {
 	font-size: 14px;
 	min-width: 100px; max-width: 150px;
 }
+table.dataintable td a.mark {color: #0000ff;font-size:12px;}
 table.dataintable td select {margin:2px 0 2px 0; width: 130px; }
 table.dataintable td.memo {font-size:12px;}
 table.dataintable td input{margin:2px 0 2px 0; }
@@ -426,8 +427,7 @@ div.transmodalview input[type=range]{ width:200px;	}
 div.transmodalview button { width:85px; margin: 3px 1px 3px 1px; }
 
 .operationmodalview {
-	/* height: 100%; */
-	height: 90%;
+	height: 100%; 
 	border: 1px solid #dddddd;
 	background-color: #5e5252;
 }
@@ -440,23 +440,36 @@ div.transmodalview button { width:85px; margin: 3px 1px 3px 1px; }
 	/* background-color: #686161; */
 	background-color: #5e5252;
 }
-.operationmodalview .view-header a {
-	margin: 3px 0 3px 0;
+.operationmodalview .view-header a.title {
+	float: left;
+	margin: 3px 0 3px 10px;
 	font-size: 16px;
 	color: #dddddd;
+}
+.operationmodalview .view-header a.title.link {
+	float: left;
+	margin: 5px 0 3px 10px;
+	font-size: 15px;
+	color: #c2c3fa;
+}
+.operationmodalview .view-header select.title {
+	float: left;
+	margin: 5px 0 5px 15px;
+	width: 110px;
 }
 .operationmodalview .view-header button.title {
 	float: left;
 	margin: 5px 0 5px 15px;
-	height: 20px;width: 60px;
+	height: 20px;width: 100px;
 	-moz-border-radius: 7px;      /* Gecko browsers */
 	-webkit-border-radius: 7px;   /* Webkit browsers */
 	border-radius:7px;            /* W3C syntax */
 	/* background: #c9c4c4; */
-}/* 内容面板样式 */
+}
+/* 内容面板样式 */
 .operationmodalview .video-content {
 	/* overflow: auto; */
-	margin: auto; /* 自动居中 */
+	/*margin: auto;  自动居中 */
 	margin-top: 5px;
 	text-align: center;
 	/* padding: 10px 10px; */

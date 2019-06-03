@@ -7,11 +7,14 @@
 const path = require("path");//nodejs中的基本包，处理路径的
 const htmlWebpackPlugin = require('html-webpack-plugin'); //打包html的插件
 const cleanWebpackPlugin = require('clean-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
     mode: "development", // defaut package type is development
-    entry: path.join(__dirname,"./src/index.js"),//__dirname代表文件所在的目录
+    entry: {
+        'index':path.join(__dirname,"./src/index.js"),//__dirname代表文件所在的目录
+    },
     output: {
         filename: "bundle.js",
         path: path.join(__dirname,"release"),
@@ -20,7 +23,7 @@ module.exports = {
     },
     module: { // compile rule of modules
         rules: [
-            // { test: /\.(png|jpg|gif)$/, loader: 'file-loader', options: { name: '[name].[ext]?[hash]' } }, //jpg file loader
+            { test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192' }, //jpg file loader
             { //ES6 compile
                 test:/\.js$/,
                 use:{
@@ -30,7 +33,7 @@ module.exports = {
                         // presets:["es2016"]
                     }
                 },
-                exclude:path.resolve(__dirname,"node_modules|release"),
+                exclude:path.resolve(__dirname,"node_modules|release|dist"),
                 include:path.resolve(__dirname,"src")
             },
             { // html files
@@ -63,6 +66,10 @@ module.exports = {
         new cleanWebpackPlugin({
             cleanAfterEveryBuildPatterns: ['*.map', '*.js', '*.html'],
         }),
+        new copyWebpackPlugin([ // 复制配置文件到发布目录
+            { from: path.join(__dirname,'./src/appcfg.js'), to:  path.join(__dirname,'./release/') },
+            { from: path.join(__dirname,'./src/HowToUse.txt'), to:  path.join(__dirname,'./release/') },//HowToUse.txt
+        ]),
     ]
     
 }

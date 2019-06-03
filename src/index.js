@@ -17,10 +17,18 @@ import './css/tab.css';
  * 2. mainpage's init()
  */
 //1. set debug flag
-var data = {'noDebug':'/cgi-bin/cgi.cgi',
-            'mock':'./debug/mock',
-            'php':'./debug/action/action.test.php'};
-yutls.setGlobalDebugFlg(data, 'mock');
+//!!! you can change the cfg in ./appcfg.js !!!
+// var appCfg = {
+//     //1. set debug flag -------
+//     debugCfg:{
+//         type: 'mock',   //!!! IMPORTANT, 根据您的需求设置该值. e.g.实际量产时填写 'real'
+//         link: {         //!!! 请将以下链接改写为自己的真实链接 !!!
+//             'real':'/cgi-bin/cgi.cgi',
+//             'mock':'./debug/mock',
+//             'php':'./debug/action/action.test.php'}
+//     }
+// };
+yutls.setGlobalServerLinkData(appCfg.debugCfg);
 
 //2. mainpage's init()
 function initMain()
