@@ -58,11 +58,11 @@ module.exports = {
         ]
     },
     plugins:[
-        new htmlWebpackPlugin({
-            filename:'index.html',//打包好后，发布的新建html名字为demo-index.html
-            template:'./app-template.html',//'./app.html'为模板去创建新的html文件
-            inject: 'body', //rel.js注入到 html - body 中
-        }),
+        // new htmlWebpackPlugin({
+        //     filename:'index.html',//打包好后，发布的新建html名字为demo-index.html
+        //     template:'./app-template.html',//'./app.html'为模板去创建新的html文件
+        //     inject: 'body', //rel.js注入到 html - body 中
+        // }),
         new cleanWebpackPlugin({
             cleanAfterEveryBuildPatterns: ['*.map', '*.js', '*.html'],
         }),
