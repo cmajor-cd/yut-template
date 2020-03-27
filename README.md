@@ -26,5 +26,5 @@
     与其他js框架不同，yut中没有路由的概念.  
     因为yut是按照C++的窗体/视概念在组织页面的，您也可以将“路由”理解为view的active和deactive。具体的细节如下：  
         1. 每个view都维护了一个本view的subViews的对象树，通过操作这些对橡树上的view object就可以操作该view。
-           具体到“路由”上，需要显示一个view或组件时只要在它的【父view】对象上使用 activeView()函数即可。如：parentViewObj.activeView('sysMaintView')。  
+           具体到“路由”上，需要显示一个view或组件时只要在它的【父view】对象上使用 activeView(classNameOfView)函数即可。如：parentViewObj.activeView('sysMaintView')。  
         2. 同样theAPP全局对象上也将mainFrm作为自己的subView进行为维护，也就是说您可以通过theApp来操作所有的view或组件。theApp提供了一个强大的API函数：traverseAllViews(yourCallbackFunc) 来完成这个工作。  
