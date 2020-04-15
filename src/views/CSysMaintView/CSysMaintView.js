@@ -12,25 +12,6 @@ class CSysMaintView extends CView{
         super();
         var _this = this;
         //1.变量+函数
-        _this.Data = {
-            smvTimeVal: 0,smvHWIpVal:0,smvHWIMEIVal:0,smvFWVerVal:0,
-        }
-        _this.enHtmlMap = {smvDemoTitle:"Create childView + Html/Js sync",
-            smvNTPTitle:"NTP Syn.",smvTime:"Correct time",smvRefreshBtn:"Rrefresh",
-            smvTitleGJWH:'Firmware',smvHWIp:'Address',smvHWIMEI:"Hardware Serial",smvFWVer:"Firmware Ver.",
-        };
-        _this.cnHtmlMap = {smvDemoTitle:"演示childView创建 + Html/Js数据同步",
-            smvNTPTitle:"NTP网络对时",smvTime:"网络对时",smvRefreshBtn:"刷新",
-            smvTitleGJWH:'固件升级维护',smvHWIp:'设备地址',smvHWIMEI:"硬件设备号",smvFWVer:"固件版本号",
-        };
-        _this.enJsMap = {
-            dsvOptSucc:"Command is successful！", smvUpgradeFileErr:"The upgrade file is incrroect!",  smvUpgradeFileNull:'Please, pick up a upgrade file!', smvUpgradeSucc:'Success to upgrade the FW file, please check the Ver/MD5 before reboot the device!',
-            smvRebootConfirm:'[reboot] will reboot the device, please confirm this operation!', smvSetDefaultCfg:'[SetDefault] will delete all personal date from the device, please confirm this operation!',
-        };
-        _this.cnJsMap = {
-            dsvOptSucc:"操作成功！", smvUpgradeFileErr:"服务器收到的升级文件名不一致，请检查！", smvUpgradeFileNull:'上载文件未正确选取!', smvUpgradeSucc:"升级文件已成功上传服务器, 请检查Ver/MD5是否不一致. \n准备就绪后请点击[重启]完成升级!",
-            smvRebootConfirm:'[重启]将导致当前业务中断, 确认是否继续!', smvSetDefaultCfg:'[恢复出厂设置]将擦除所有个人信息, 确认是否继续!',
-        };
         //
         let option = {
             aParent: hParent,
@@ -124,25 +105,25 @@ class CSysMaintView extends CView{
     }
    
 }
-// CSysMaintView.prototype = new CView();
-// CSysMaintView.prototype.Data = {
-//     smvTimeVal: 0,smvHWIpVal:0,smvHWIMEIVal:0,smvFWVerVal:0,
-// }
-// CSysMaintView.prototype.enHtmlMap = {smvDemoTitle:"Create childView + Html/Js sync",
-//     smvNTPTitle:"NTP Syn.",smvTime:"Correct time",smvRefreshBtn:"Rrefresh",
-//     smvTitleGJWH:'Firmware',smvHWIp:'Address',smvHWIMEI:"Hardware Serial",smvFWVer:"Firmware Ver.",
-// };
-// CSysMaintView.prototype.cnHtmlMap = {smvDemoTitle:"演示childView创建 + Html/Js数据同步",
-//     smvNTPTitle:"NTP网络对时",smvTime:"网络对时",smvRefreshBtn:"刷新",
-//     smvTitleGJWH:'固件升级维护',smvHWIp:'设备地址',smvHWIMEI:"硬件设备号",smvFWVer:"固件版本号",
-// };
-// CSysMaintView.prototype.enJsMap = {
-//     dsvOptSucc:"Command is successful！", smvUpgradeFileErr:"The upgrade file is incrroect!",  smvUpgradeFileNull:'Please, pick up a upgrade file!', smvUpgradeSucc:'Success to upgrade the FW file, please check the Ver/MD5 before reboot the device!',
-//     smvRebootConfirm:'[reboot] will reboot the device, please confirm this operation!', smvSetDefaultCfg:'[SetDefault] will delete all personal date from the device, please confirm this operation!',
-// };
-// CSysMaintView.prototype.cnJsMap = {
-//     dsvOptSucc:"操作成功！", smvUpgradeFileErr:"服务器收到的升级文件名不一致，请检查！", smvUpgradeFileNull:'上载文件未正确选取!', smvUpgradeSucc:"升级文件已成功上传服务器, 请检查Ver/MD5是否不一致. \n准备就绪后请点击[重启]完成升级!",
-//     smvRebootConfirm:'[重启]将导致当前业务中断, 确认是否继续!', smvSetDefaultCfg:'[恢复出厂设置]将擦除所有个人信息, 确认是否继续!',
-// };
+// 本行演示内部函数、变量定义可以移到构造函数之外，已保持构造函数简洁。
+CSysMaintView.prototype.Data = {
+    smvTimeVal: 0,smvHWIpVal:0,smvHWIMEIVal:0,smvFWVerVal:0,
+}
+CSysMaintView.prototype.enHtmlMap = {smvDemoTitle:"Create childView + Html/Js sync",
+    smvNTPTitle:"NTP Syn.",smvTime:"Correct time",smvRefreshBtn:"Rrefresh",
+    smvTitleGJWH:'Firmware',smvHWIp:'Address',smvHWIMEI:"Hardware Serial",smvFWVer:"Firmware Ver.",
+};
+CSysMaintView.prototype.cnHtmlMap = {smvDemoTitle:"演示childView创建 + Html/Js数据同步",
+    smvNTPTitle:"NTP网络对时",smvTime:"网络对时",smvRefreshBtn:"刷新",
+    smvTitleGJWH:'固件升级维护',smvHWIp:'设备地址',smvHWIMEI:"硬件设备号",smvFWVer:"固件版本号",
+};
+CSysMaintView.prototype.enJsMap = {
+    dsvOptSucc:"Command is successful！", smvUpgradeFileErr:"The upgrade file is incrroect!",  smvUpgradeFileNull:'Please, pick up a upgrade file!', smvUpgradeSucc:'Success to upgrade the FW file, please check the Ver/MD5 before reboot the device!',
+    smvRebootConfirm:'[reboot] will reboot the device, please confirm this operation!', smvSetDefaultCfg:'[SetDefault] will delete all personal date from the device, please confirm this operation!',
+};
+CSysMaintView.prototype.cnJsMap = {
+    dsvOptSucc:"操作成功！", smvUpgradeFileErr:"服务器收到的升级文件名不一致，请检查！", smvUpgradeFileNull:'上载文件未正确选取!', smvUpgradeSucc:"升级文件已成功上传服务器, 请检查Ver/MD5是否不一致. \n准备就绪后请点击[重启]完成升级!",
+    smvRebootConfirm:'[重启]将导致当前业务中断, 确认是否继续!', smvSetDefaultCfg:'[恢复出厂设置]将擦除所有个人信息, 确认是否继续!',
+};
 
 export default CSysMaintView;

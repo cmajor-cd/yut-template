@@ -55,11 +55,7 @@ class CDashboardView extends CView{
         });
         //
         $('#dsvTestBtn').click(()=>{
-            yutls.msgBox('This is a test to [CALL yutls class member]!');
-            // function cb(data){
-            //     alert(data);
-            // };
-            // yutls.load( './views/CDashboardView.html', (data)=>{alert(data)});
+            yutls.msgBox('This is a test to [CALL yutls class member=>yutls.msgBox]!');
         });
     }
     

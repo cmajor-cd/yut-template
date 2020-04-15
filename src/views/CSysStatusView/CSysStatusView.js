@@ -2,7 +2,7 @@ import htmlTemplate from './CSysStatusView.html';
 // yutls.includeJs('./views/CSysStatusView/subviews/CGnssView.js');
 // yutls.includeJs('./views/CSysStatusView/subviews/CLanView.js');
 import $ from 'jquery';
-import {CView} from 'yut';
+import {CView,yutls,theApp} from 'yut';
 import CGnssView from './subviews/CGnssView';
 import CLanView from './subviews/CLanView';
 /**
@@ -48,6 +48,13 @@ class CSysStatusView extends CView{
             //show the tab subview
             _this.activeView(targetid);
         });
+        // demo： ssvTabGnssDemoUpdateByClassGetNodeObjByChildViewIDBtn:"获取本View子组件数据(CView.getNodeObjByViewID)",
+        $('#ssvTabGnssDemoUpdateByClassGetNodeObjByChildViewIDBtn').click(() => {
+            this.getNodeObjByChildViewID('ssvTabLan', (node)=>{
+                this.Data.CLanViewssvTabLan1IP = node.Data.ssvTabLan1IP;
+                yutls.msgBox('Get data from CLanViewssvTab:Lan1IP = '+ this.Data.CLanViewssvTabLan1IP);
+            });
+        });
     }
     // evMounted
     myMounted() {
@@ -62,11 +69,18 @@ class CSysStatusView extends CView{
 }
 // CSysStatusView.prototype = new CView();
 CSysStatusView.prototype.Data = {
+    CLanViewssvTabLan1IP:0,
     // dsvLocTimeVal: '1',dsvDurationTimeVal: 2,
 }
 // 多语言实现
-CSysStatusView.prototype.enHtmlMap = {ssvTabGnssDemoTitle:"This page demos: create childView + Html/Js sync + event + private css",}
-CSysStatusView.prototype.cnHtmlMap = {ssvTabGnssDemoTitle:"演示childView创建 + Html/Js数据同步 + 事件触发 + 私有css",}
+CSysStatusView.prototype.enHtmlMap = {
+    ssvTabGnssDemoTitle:"This page demos: create childView + Html/Js sync + event + private css",
+    ssvTabGnssDemoUpdateByClassGetNodeObjByChildViewIDBtn:"subView Data(CView.getNodeObjByViewID)",
+}
+CSysStatusView.prototype.cnHtmlMap = {
+    ssvTabGnssDemoTitle:"演示childView创建 + Html/Js数据同步 + 事件触发 + 私有css",
+    ssvTabGnssDemoUpdateByClassGetNodeObjByChildViewIDBtn:"获取本View子组件数据(CView.getNodeObjByViewID)",
+}
 CSysStatusView.prototype.enJsMap = {
     dsvOptSucc:"Command is successful！",
 }

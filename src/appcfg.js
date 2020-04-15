@@ -16,6 +16,7 @@ var appCfg = {
         link: {         //!!! 请将以下链接填写为自己的真实链接 !!!
             'real':'/cgi-bin/cgi.cgi',
             'mock':'./debug/mock',
-            'php':'./debug/action/action.test.php'}
+            'php':'./debug/action/action.test.php'
+        }
     }
 };

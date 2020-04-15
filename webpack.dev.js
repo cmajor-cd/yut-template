@@ -9,6 +9,8 @@ const common = require('./webpack.config');
 const htmlWebpackPlugin = require('html-webpack-plugin'); //打包html的插件
 
 module.exports = merge(common, {
+    devtool: 'source-map',
+    mode: "development", // defaut package type is development
     devServer:{
         //"start": "webpack-dev-server --inline --open --port 5008"
         // contentBase:path.join(__dirname,"./release"),

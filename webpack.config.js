@@ -10,8 +10,8 @@ const cleanWebpackPlugin = require('clean-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    devtool: 'source-map',
-    mode: "development", // defaut package type is development
+    // devtool: 'source-map',
+    // mode: "development", // defaut package type is development
     entry: {
         'index':path.join(__dirname,"./src/index.js"),//__dirname代表文件所在的目录
     },
